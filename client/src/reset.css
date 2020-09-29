@@ -1,0 +1,47 @@
+html, header, body, footer, nav,
+div, p, span, a, img,
+hgroup, h1, h2, h3, h4, h5, h6,
+form, label, input, button, select, option,
+table, tbody, tfoot, thead, tr, th, td,
+ol, ul, li,
+samp, code, pre, sub, sup,
+em, small, strike, strong, mark, b, u, i {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-family: 'Roboto', sans-serif;
+	vertical-align: baseline;
+	box-sizing: inherit;
+}
+
+samp, code {
+	font-family: 'Roboto Mono', monospace;
+}
+
+html, body, #root {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+html {
+    box-sizing: border-box;
+	font-size: 100%;
+}
+
+body {
+	line-height: 1;
+}
+
+footer, header, hgroup, nav {
+	display: block;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input, button {
+	outline: none;
+}

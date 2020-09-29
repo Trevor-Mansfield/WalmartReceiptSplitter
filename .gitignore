@@ -1,0 +1,22 @@
+# backend
+backend/cost_claimer/migrations/
+backend/db.sqlite3
+backend/log.txt
+backend/static/receipt_items/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]/
+
+# client
+client/build/
+client/node_modules/
+client/src/Desktop/
+
+# receipt_parser
+receipt_parser/*
+!ReceiptParser.py
+
+# venv
+venv/*
+!venv/requirements.txt
+
+# general
+.idea
+__pycache__/

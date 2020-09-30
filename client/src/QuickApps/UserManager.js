@@ -123,7 +123,7 @@ class UserManager extends React.Component {
 
 
     forgotPassword = () => {
-        this.displayError({message: "You're a dud. I didn't actually implement that."});
+        this.displayError({message: "Make Superuser Reset Password"});
     };
 
     makeLoginPage = () => {

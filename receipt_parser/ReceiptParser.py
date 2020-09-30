@@ -75,9 +75,9 @@ class Receipt:
         item_dst_path = "{}/{}/{}".format(cwd[:cwd.rfind("/")], RELATIVE_IMAGE_EXPORT_PATH, "yes")
         os.makedirs(item_dst_path, exist_ok=True)
         item_dst_path += "/"
-        taxed = None
         for item in self.items.values():
-            print("Is {} for {} taxed? (y/n)".format(item.name, item.price))
+            taxed = None
+            print("Is {} for {} taxed? (y/n) ".format(item.name, item.price), )
             while taxed is None:
                 taxed = input()
                 if taxed == "y":
@@ -104,7 +104,7 @@ class Receipt:
 
 
 def parse_receipt(receiptDate, payer):
-    receipt = Receipt(payer, receiptDate, "0.0800")
+    receipt = Receipt(payer, receiptDate)
     with open(receiptDate + ".html", "r") as receiptFile:
         receiptDoc = BeautifulSoup(receiptFile.read(), 'html.parser')
         for item in receiptDoc.find("ul", "results-list").div.contents:
@@ -134,8 +134,8 @@ if __name__ == "__main__":
     for user in user_list:
         print("{} (id {})".format(user["name"], user["user_id"]))
         ids.add(user["user_id"])
-    payer_id = input("Enter id: ")
+    payer_id = int(input("Enter id: "))
     while payer_id not in ids:
         print("Unknown id")
-        payer_id = input("Enter id: ")
+        payer_id = int(input("Enter id: "))
     parse_receipt(receiptDate, payer_id)

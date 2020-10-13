@@ -72,7 +72,7 @@ class Receipt:
         items = []
         item_src_path = "./{}_files/".format(self.date)
         cwd = os.getcwd().replace("\\", "/")
-        item_dst_path = "{}/{}/{}".format(cwd[:cwd.rfind("/")], RELATIVE_IMAGE_EXPORT_PATH, "yes")
+        item_dst_path = "{}/{}/{}".format(cwd[:cwd.rfind("/")], RELATIVE_IMAGE_EXPORT_PATH, self.date)
         os.makedirs(item_dst_path, exist_ok=True)
         item_dst_path += "/"
         for item in self.items.values():
